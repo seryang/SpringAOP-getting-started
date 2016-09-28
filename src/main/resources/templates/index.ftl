@@ -1,7 +1,7 @@
 <html>
-<head>
-</head>
-<body>
-    ${key}
-</body>
+    <head>
+    </head>
+    <body>
+        ${key}
+    </body>
 </html>

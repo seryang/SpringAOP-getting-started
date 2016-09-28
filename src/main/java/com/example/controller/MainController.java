@@ -1,5 +1,6 @@
 package com.example.controller;
 
+import lombok.extern.apachecommons.CommonsLog;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -7,6 +8,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 
 @Controller
 @RequestMapping("/")
+@CommonsLog
 public class MainController {
 
     @RequestMapping("")
@@ -17,7 +19,7 @@ public class MainController {
 
     @RequestMapping("/view")
     public String view(Model model){
-        System.out.println("* view 메소드 실행 *");
+        log.info("* view 메소드 실행 *");
         model.addAttribute("key", "하이");
         return "index";
     }
